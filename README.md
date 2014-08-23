@@ -28,4 +28,16 @@ Please write a test for every change you make. Run all tests
 
     python setup.py test
 
-in order to ensure that you didn't break an existing feature.
+in order to ensure that you didn't break an existing feature. Some of
+the tests need a running Apache with a `mod_proxy_balancer`. The file
+`setup_apache.sh` can be used to set up a well configured Apache
+server if you're using Ubuntu Linux.
+
+I strongly encourage you to use [Vagrant](http://www.vagrantup.com/).
+Qaidan provides a `Vagrantfile` that sets up a virtual machine with
+all prerequisites. You need three commands only to start the virtual
+machine and execute Quaidan's test suite.
+
+    vagrant up
+    vagrant ssh
+    python setup.py test
