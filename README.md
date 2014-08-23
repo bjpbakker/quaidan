@@ -1,6 +1,8 @@
 Quaidan
 =======
 
+[![Build Status](https://travis-ci.org/stefanbirkner/quaidan.svg?branch=master)](https://travis-ci.org/stefanbirkner/quaidan)
+
 Quaidan is a python wrapper for
 [mod_proxy_balancer](http://httpd.apache.org/docs/2.4/mod/mod_proxy_balancer.html)'s
 balancer manager.
