@@ -21,6 +21,48 @@ and unpack it or clone the repository. Now run
 
 which installs Quaidan in your Python installation.
 
+Usage
+-----
+
+The starting point for all interactions is a `BalancerManager` object.
+It is created by specifying the balancer manager's URL.
+
+```python
+from quaidan import BalancerManager
+
+balancer_manager = BalancerManager('http://127.0.0.1/balancer-manager')
+```
+
+This `BalancerManager` can be used to read the current state of the load
+balancer. The following snippet prints alle infos that are available
+from the balancer manager page.
+
+```python
+status = balancer_manager.get_status()
+print('clusters:')
+for cluster in status.clusters:
+    print('  -')
+    print('    name: ' + cluster.name)
+    print('    members:')
+    for member in cluster.members:
+        print('      -')
+        print('        worker_url: "' + member.worker_url + '"')
+        print('        route: "' + str(member.route) + '"')
+        print('        route_redirect: "' + str(member.route_redirect) + '"')
+        print('        load_factor: ' + str(member.load_factor))
+        print('        lb_set: ' + str(member.lb_set))
+        print('        ignore_errors: ' + str(member.ignore_errors))
+        print('        draining_mode: ' + str(member.draining_mode))
+        print('        enabled: ' + str(member.enabled))
+        print('        hot_standby: ' + str(member.hot_standby))
+        print('        elected: ' + str(member.elected))
+        print('        busy: ' + str(member.busy))
+        print('        load: ' + str(member.load))
+        print('        transferred: ' + member.transferred)
+        print('        read: ' + member.read)
+```
+
+
 Development Guide
 -----------------
 

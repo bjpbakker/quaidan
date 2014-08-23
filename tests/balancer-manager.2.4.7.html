@@ -1,0 +1,79 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<html><head><title>Balancer Manager</title>
+<style type='text/css'>
+table {
+ border-width: 1px;
+ border-spacing: 3px;
+ border-style: solid;
+ border-color: gray;
+ border-collapse: collapse;
+ background-color: white;
+ text-align: center;
+}
+th {
+ border-width: 1px;
+ padding: 2px;
+ border-style: dotted;
+ border-color: gray;
+ background-color: white;
+ text-align: center;
+}
+td {
+ border-width: 1px;
+ padding: 2px;
+ border-style: dotted;
+ border-color: gray;
+ background-color: white;
+ text-align: center;
+}
+</style>
+</head>
+<body><h1>Load Balancer Manager for localhost</h1>
+
+<dl><dt>Server Version: Apache/2.4.7 (Ubuntu)</dt>
+<dt>Server Built: Jul 22 2014 14:36:38</dt>
+<dt>Balancer changes will NOT be persisted on restart.</dt><dt>Balancers are inherited from main server.</dt><dt>ProxyPass settings are inherited from main server.</dt></dl>
+<hr />
+<h3>LoadBalancer Status for <a href="/balancer-manager?b=cluster1&nonce=60431ddd-fae6-4414-bb7b-277dfe950ee8">balancer://cluster1</a> [pfeb536ef_cluster1]</h3>
+
+
+<table><tr><th>MaxMembers</th><th>StickySession</th><th>DisableFailover</th><th>Timeout</th><th>FailoverAttempts</th><th>Method</th><th>Path</th><th>Active</th></tr>
+<tr><td>2 [2 Used]</td>
+<td> (None) <td>Off</td>
+</td><td>0</td><td>1</td>
+<td>byrequests</td>
+<td>/</td>
+<td>Yes</td>
+</table>
+<br />
+
+<table><tr><th>Worker URL</th><th>Route</th><th>RouteRedir</th><th>Factor</th><th>Set</th><th>Status</th><th>Elected</th><th>Busy</th><th>Load</th><th>To</th><th>From</th></tr>
+<tr>
+<td><a href="/balancer-manager?b=cluster1&w=http://192.168.1.50&nonce=60431ddd-fae6-4414-bb7b-277dfe950ee8">http://192.168.1.50</a></td><td>dummy route</td><td>dummy route redirect</td><td>2</td><td>3</td><td>Init Ok </td><td>4</td><td>5</td><td>6</td><td> 17M </td><td> 1.8G </td></tr>
+<tr>
+<td><a href="/balancer-manager?b=cluster1&w=http://192.168.1.51:8080&nonce=60431ddd-fae6-4414-bb7b-277dfe950ee8">http://192.168.1.51:8080</a></td><td></td><td></td><td>1</td><td>0</td><td>Init Ign Drn Dis Stby </td><td>0</td><td>0</td><td>0</td><td>  0 </td><td>  0 </td></tr>
+</table>
+<hr />
+<h3>LoadBalancer Status for <a href="/balancer-manager?b=cluster2&nonce=16bf15a3-1c0d-4563-972f-6cda5885b224">balancer://cluster2</a> [pfeb536ef_cluster2]</h3>
+
+
+<table><tr><th>MaxMembers</th><th>StickySession</th><th>DisableFailover</th><th>Timeout</th><th>FailoverAttempts</th><th>Method</th><th>Path</th><th>Active</th></tr>
+<tr><td>2 [2 Used]</td>
+<td> (None) <td>Off</td>
+</td><td>0</td><td>1</td>
+<td>byrequests</td>
+<td>/</td>
+<td>Yes</td>
+</table>
+<br />
+
+<table><tr><th>Worker URL</th><th>Route</th><th>RouteRedir</th><th>Factor</th><th>Set</th><th>Status</th><th>Elected</th><th>Busy</th><th>Load</th><th>To</th><th>From</th></tr>
+<tr>
+<td><a href="/balancer-manager?b=cluster2&w=http://192.168.1.52&nonce=16bf15a3-1c0d-4563-972f-6cda5885b224">http://192.168.1.52</a></td><td></td><td></td><td>1</td><td>0</td><td>Init Dis </td><td>0</td><td>0</td><td>0</td><td>  0 </td><td>  0 </td></tr>
+<tr>
+<td><a href="/balancer-manager?b=cluster2&w=http://192.168.1.53:8080&nonce=16bf15a3-1c0d-4563-972f-6cda5885b224">http://192.168.1.53:8080</a></td><td></td><td></td><td>1</td><td>0</td><td>Init Ok Stby </td><td>0</td><td>0</td><td>0</td><td>  0 </td><td>  0 </td></tr>
+</table>
+<hr />
+<address>Apache/2.4.7 (Ubuntu) Server at localhost Port 8080</address>
+</body></html>
+
