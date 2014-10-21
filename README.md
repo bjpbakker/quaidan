@@ -7,9 +7,10 @@ Quaidan is a python wrapper for
 [mod_proxy_balancer](http://httpd.apache.org/docs/2.4/mod/mod_proxy_balancer.html)'s
 balancer manager.
 
-Quaidan currently has only one feature:
+Quaidan currently has two features:
 
 * Provide the current state of the load balancer.
+* Update cluster members.
 
 Installation
 ------------
@@ -59,6 +60,29 @@ for cluster in status.clusters:
         print('        read: ' + member.read)
 ```
 
+The `BalancerManager` is used for updating members, too. You create an
+`UpdateMember` command from a `Member` tuple.
+
+```python
+status = balancer_manager.get_status()
+cluster = status.clusters[0]
+update_member = UpdateMember(cluster.name, cluster.members[0])
+```
+
+Update the attributes that should be changed and send the command to
+the balancer manager.
+
+```python
+update_member.route = 'dummy route'
+update_member.route_redirect = 'dummy route redirect'
+update_member.load_factor = 1
+update_member.lb_set = 1
+update_member.ignore_errors = True
+update_member.drainig_mode = True
+update_member.enabled = True
+update_member.hot_standby = True
+balancer_manager.send_command(update_member)
+```
 
 Development Guide
 -----------------
