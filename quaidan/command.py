@@ -4,6 +4,8 @@
 class UpdateMember(object):
     """A command that updates a single member.
     """
+    # pylint: disable = too-few-public-methods
+    # pylint: disable = too-many-instance-attributes
 
     def __init__(self, cluster_name, member):
         """Creates a new update command for a single member.

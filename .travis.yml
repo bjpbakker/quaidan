@@ -5,5 +5,7 @@ python:
 - "3.2"
 - "3.3"
 - "3.4"
-install: sudo ./setup_apache.sh
-script: python setup.py test
+install:
+  - sudo ./setup_apache.sh
+  - pip install setuptools-lint
+script: python setup.py test lint

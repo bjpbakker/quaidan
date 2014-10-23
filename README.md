@@ -87,14 +87,17 @@ balancer_manager.send_command(update_member)
 Development Guide
 -----------------
 
-Please write a test for every change you make. Run all tests
+Please write a test for every change you make. Run all tests and
+[Pylint](http://www.pylint.org/)
 
-    python setup.py test
+    python setup.py lint test
 
-in order to ensure that you didn't break an existing feature. Some of
-the tests need a running Apache with a `mod_proxy_balancer`. The file
-`setup_apache.sh` can be used to set up a well configured Apache
-server if you're using Ubuntu Linux.
+in order to ensure that you didn't break an existing feature and your
+code complies with the Pylint standards.
+
+For this you need Pylint and a running Apache with a
+`mod_proxy_balancer`. The file `setup_apache.sh` can be used to set up
+a well configured Apache server if you're using Ubuntu Linux.
 
 I strongly encourage you to use [Vagrant](http://www.vagrantup.com/).
 Qaidan provides a `Vagrantfile` that sets up a virtual machine with
@@ -103,4 +106,4 @@ machine and execute Quaidan's test suite.
 
     vagrant up
     vagrant ssh
-    python setup.py test
+    python setup.py lint test
