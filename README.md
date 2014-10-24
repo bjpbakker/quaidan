@@ -14,12 +14,9 @@ Quaidan currently has only one feature:
 Installation
 ------------
 
-[Download Quaidan](https://github.com/stefanbirkner/quaidan/archive/master.zip)
-and unpack it or clone the repository. Now run
+This package is published on [PyPi](https://pypi.python.org/pypi/quaidan/). You can use [pip](https://pip.pypa.io/en/latest/) to install it.
 
-    python setup.py install
-
-which installs Quaidan in your Python installation.
+    pip install quaidan
 
 Usage
 -----
