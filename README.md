@@ -107,3 +107,13 @@ machine and execute Quaidan's test suite.
     vagrant up
     vagrant ssh
     python setup.py lint test
+
+Release Guide
+-------------
+
+* Ensure that the version is set in `setup.py` and `quaidan/__init.py__`.
+* Create a release tag: `git tag quaidan-x.x.x -m "Release x.x.x"`.
+* Push the tag to GitHub: `git push --tags`.
+* Upload to PyPI: `python setup.py sdist upload -r pypi`.
+* Create a release on GitHub.
+
