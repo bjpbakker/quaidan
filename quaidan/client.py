@@ -57,5 +57,7 @@ def to_string(value):
     """
     if isinstance(value, bool):
         return '1' if value else '0'
-    else:
+    elif value:
         return str(value)
+    else:
+        return ''

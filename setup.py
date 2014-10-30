@@ -2,10 +2,10 @@ from setuptools import setup, find_packages
 
 setup(
     name = 'quaidan',
-    version = '0.2.0',
+    version = '0.2.1',
     packages = find_packages(),
     url = 'http://github.com/stefanbirkner/quaidan/',
-    download_url = 'https://github.com/stefanbirkner/quaidan/archive/quaidan-0.2.0.tar.gz',
+    download_url = 'https://github.com/stefanbirkner/quaidan/archive/quaidan-0.2.1.tar.gz',
     license = 'MIT License',
     install_requires = ['lxml', 'requests'],
     tests_require = ['PyHamcrest>=1.0'],

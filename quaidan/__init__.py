@@ -4,7 +4,7 @@ manager. The starting point for all interactions is a
 can be used to update members.
 """
 
-__version__ = '0.2.0'
+__version__ = '0.2.1'
 
 from quaidan.client import Client
 from quaidan.status import parse_balancer_manager_page
