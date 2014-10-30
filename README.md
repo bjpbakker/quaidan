@@ -60,8 +60,14 @@ for cluster in status.clusters:
         print('        read: ' + member.read)
 ```
 
-The `BalancerManager` is used for updating members, too. You create an
-`UpdateMember` command from a `Member` tuple.
+The `BalancerManager` is used for updating members, too. Please import
+the `UpdateMember`command first.
+
+```python
+from quaidan.command import UpdateMember
+```
+
+Now create an `UpdateMember` command from a `Member` tuple.
 
 ```python
 status = balancer_manager.get_status()
