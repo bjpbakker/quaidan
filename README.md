@@ -123,3 +123,9 @@ Release Guide
 * Upload to PyPI: `python setup.py sdist upload -r pypi`.
 * Create a release on GitHub.
 
+See also
+--------
+
+* [Apache Cluster Manager](https://code.google.com/p/apache-cluster-manager/)
+* [Sam Gleske's balancer-manager.py](https://github.com/samrocketman/drexel-university/blob/master/appserver-scripts/balancer-manager.py)
+* [Source code of mod_proxy_balancer](http://svn.apache.org/viewvc/httpd/httpd/trunk/modules/proxy/mod_proxy_balancer.c)
