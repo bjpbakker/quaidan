@@ -90,6 +90,16 @@ update_member.hot_standby = True
 balancer_manager.send_command(update_member)
 ```
 
+Contributing
+------------
+
+If you have a feature request, found a bug or want to ask a question
+about Quaidan then please feel free to
+
+* [write an issue.](https://github.com/stefanbirkner/quaidan/issues/new)
+* create a pull request. (See [Understanding the GitHub Flow](https://guides.github.com/introduction/flow/index.html))
+* [write a mail to mail@stefan-birkner.de](mailto:mail@stefan-birkner.de)
+
 Development Guide
 -----------------
 
