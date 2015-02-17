@@ -13,7 +13,7 @@ class ClientTest(unittest.TestCase):
         page = self._client.get_balancer_manager_page()
         assert_that(page, string_contains_in_order(
             '<h1>Load Balancer Manager for 127.0.0.1</h1>',
-            '<address>Apache/2.4.10 (Ubuntu) Server at 127.0.0.1 Port 80</address>'))
+            '<address>Apache/2.4.12 (Ubuntu) Server at 127.0.0.1 Port 80</address>'))
 
     def test_send_form(self):
         self.__reset_cluster('cluster2')
