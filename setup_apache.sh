@@ -2,7 +2,7 @@
 
 apt-add-repository -y ppa:ondrej/apache2
 apt-get -y update
-apt-get -y install apache2
+apt-get -y install apache2=2.4.17-2+deb.sury.org~precise+1
 ls /etc/apache2/mods-available
 ln -s /etc/apache2/mods-available/proxy_balancer.conf /etc/apache2/mods-enabled/.
 ln -s /etc/apache2/mods-available/proxy_balancer.load /etc/apache2/mods-enabled/.
