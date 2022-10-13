@@ -27,7 +27,7 @@ class BalancerManagerParserTest(unittest.TestCase):
         self.assertEquals('dummy route redirect', self.status.clusters[0].members[0].route_redirect)
 
     def test_extracts_load_factor_of_member(self):
-        self.assertEquals(2, self.status.clusters[0].members[0].load_factor)
+        self.assertEquals(2.0, self.status.clusters[0].members[0].load_factor)
 
     def test_extracts_lb_set_of_member(self):
         self.assertEquals(3, self.status.clusters[0].members[0].lb_set)
@@ -64,4 +64,3 @@ class BalancerManagerParserTest(unittest.TestCase):
 
 if __name__ == '__main__':
     unittest.main()
-

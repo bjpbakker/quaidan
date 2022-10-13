@@ -83,9 +83,8 @@ def _parse_member(element):
     hot_standby = "Stby" in status
     return Member(
         cells[0].find('a').text, cells[1].text, cells[2].text,
-        int(cells[3].text), int(cells[4].text), ignore_errors,
+        float(cells[3].text), int(cells[4].text), ignore_errors,
         draining_mode, enabled, hot_standby, int(cells[6].text),
         int(cells[7].text), int(cells[8].text), cells[9].text.strip(),
         cells[10].text.strip()
     )
-
