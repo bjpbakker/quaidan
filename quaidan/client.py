@@ -35,7 +35,7 @@ class Client(object):
     def __get_nonce_for_cluster(self, cluster):
         """Returns the nonce for the specified cluster."""
         page = self.get_balancer_manager_page()
-        pattern = r'b=' + re.escape(cluster) + r'&nonce=([a-f0-9\-]+)'
+        pattern = r'b=' + re.escape(cluster) + r'&(?:amp;)?nonce=([a-f0-9\-]+)'
         return re.findall(pattern, page)[0]
 
 def convert_values_to_string(form):
